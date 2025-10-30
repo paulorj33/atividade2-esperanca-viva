@@ -56,7 +56,6 @@ Entrega II – Aplicação de CSS3 e Design Responsivo
 
 🌐 Acesse o Site Publicado [https://paulorj33.github.io/atividade2-esperanca-viva/]
 /
-
 🔗 Acesse o repositório no GitHub [https://github.com/paulorj33/atividade2-esperanca-viva]
 
 ✅ Projeto concluído e em conformidade com todos os requisitos da Entrega II.
