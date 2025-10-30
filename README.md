@@ -34,6 +34,7 @@ esperanca-viva/
 ├── imagens e ícones
 
 
+---
 
 ## 🧰 Tecnologias Utilizadas
 - **HTML5**
@@ -44,9 +45,10 @@ esperanca-viva/
 ---
 
 ## 🚀 Como Executar
-1. Baixe ou clone o repositório: 
- [git clone https://github.com/paulorj33/atividade2-esperanca-viva]  ```bash
-Abra o arquivo index.html no navegador.
+1. Baixe ou clone o repositório:  
+   ```bash
+   git clone  [git clone https://github.com/paulorj33/atividade2-esperanca-viva]
+
 
 🏫 Informações Acadêmicas
 Universidade Veiga de Almeida – Curso de Análise e Desenvolvimento de Sistemas
