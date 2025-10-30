@@ -50,7 +50,7 @@ esperanca-viva/
    git clone  [git clone https://github.com/paulorj33/atividade2-esperanca-viva]
 
 
-🏫 Informações Acadêmicas
+##🏫 Informações Acadêmicas
 Universidade Veiga de Almeida – Curso de Análise e Desenvolvimento de Sistemas
 Entrega II – Aplicação de CSS3 e Design Responsivo
 
