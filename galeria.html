@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esperança Viva | Galeria de Atividades</title>
+
+  <!-- Estilo principal -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- ===============================
+       CABEÇALHO E MENU GLOBAL
+  =============================== -->
+  <header class="site-header">
+    <div class="header-content">
+      <img src="assets/titulo.png" alt="Símbolo Esperança Viva" class="logo" />
+      <h1>Esperança Viva</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <!-- Dropdown de Projetos -->
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <ul class="submenu">
+            <li><a href="projetos.html#educacao">Educação</a></li>
+            <li><a href="projetos.html#saude">Saúde</a></li>
+            <li><a href="projetos.html#alimentacao">Alimentação</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="galeria.html" class="ativo">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       CONTEÚDO PRINCIPAL
+  =============================== -->
+  <main>
+    <section class="galeria">
+      <h2 class="section-title">Galeria de Atividades</h2>
+
+      <div class="gallery">
+        <img src="assets/criancas.jpg" alt="Crianças em atividade educativa" onclick="openLightbox(this)">
+        <img src="assets/alimentos.jpg" alt="Doação de alimentos" onclick="openLightbox(this)">
+        <img src="assets/limpeza.jpg" alt="Ação de limpeza comunitária" onclick="openLightbox(this)">
+        <img src="assets/acao.jpg" alt="Voluntários em ação" onclick="openLightbox(this)">
+        <img src="assets/plantio.jpg" alt="Plantio de mudas" onclick="openLightbox(this)">
+        <img src="assets/estudando.jpg" alt="Estudantes em sala" onclick="openLightbox(this)">
+        <img src="assets/idoso.jpg" alt="Atividades com idosos" onclick="openLightbox(this)">
+        <img src="assets/alimentacao.jpg" alt="Refeições solidárias" onclick="openLightbox(this)">
+      </div>
+    </section>
+  </main>
+
+  <!-- ===============================
+       LIGHTBOX
+  =============================== -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" alt="Imagem ampliada">
+  </div>
+
+  <!-- ===============================
+       RODAPÉ
+  =============================== -->
+  <footer>
+    <p>&copy; 2025 Esperança Viva. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ===============================
+       SCRIPT DE INTERAÇÕES
+  =============================== -->
+  <script>
+    function openLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,840 @@
+/* ===============================
+   🌿 DESIGN SYSTEM – ESPERANÇA VIVA
+   =============================== */
+
+:root {
+  /* 🎨 Paleta de Cores (harmonizada) */
+  --cor-primaria: #6e9273;
+  --cor-secundaria: #afd9bd;
+  --cor-destaque: #f4b400;
+  --cor-clara: #ffffff;
+  --cor-escura: #1f1f1f;
+  --cor-neutra-1: #f8f9f8;
+  --cor-neutra-2: #d9e0dc;
+  --cor-neutra-3: #9ca9a0;
+
+  /* 🔤 Tipografia (hierarquia) */
+  --fonte-principal: 'Poppins', sans-serif;
+  --fonte-titulo: 2.5em;
+  --fonte-subtitulo: 1.5rem;
+  --fonte-texto: 1.2rem;
+  --fonte-pequena: 1.0rem;
+  --fonte-botao: 1.0rem;
+
+  /* 📏 Espaçamento modular (renomeado) */
+  --espaco-xs: 8px;     /* micro – bordas, ícones, detalhes */
+  --espaco-sm: 9px;     /* pequeno – espaçamento entre textos e botões */
+  --espaco-md: 10px;    /* médio – margens internas de blocos e cards */
+  --espaco-lg: 15px;    /* grande – espaçamento entre seções */
+  --espaco-xl: 25px;    /* extra – hero, seções amplas */
+  --espaco-xxl: 32px;   /* gigante – áreas de destaque */
+
+  /* 🌐 Larguras padrão */
+  --container: 800px;
+}
+
+/* 🧭 Centralização global de textos */
+h1, h2, h3, h4, h5, h6,
+p, a, span, li, label, button, input, textarea {
+  text-align: center;
+}
+
+/* ===============================
+   TÍTULOS E TIPOGRAFIA
+   =============================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: var(--espaco-xs);
+}
+
+h1, h2 {
+  color: var(--cor-primaria);
+  font-size: var(--fonte-titulo);
+}
+
+h3 {
+  color: var(--cor-primaria);
+  font-size: var(--fonte-titulo);
+}
+
+p {
+  color: var(--cor-neutra);
+  font-size: var(--fonte-texto);
+  line-height: 1.0;
+  margin-bottom: var(--espaco-xs);
+}
+
+small, footer, .fonte-pequena {
+  font-size: var(--fonte-principal);
+}
+
+/* ===============================
+   CABEÇALHO / LOGO E TÍTULO CENTRALIZADOS
+   =============================== */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-sm);
+  width: 100%;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  color: var(--cor-clara);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  margin-right: var(--espaco-xs);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+}
+
+/* ===============================
+   PADRONIZAÇÃO DOS TÍTULOS DE MENU
+   =============================== */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-sm);
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav a {
+  color: var(--cor-clara);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: var(--espaco-xs) var(--espaco-sm);
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  display: block;
+}
+
+nav a:hover,
+nav a.ativo {
+  background: var(--cor-secundaria);
+  color: var(--cor-clara);
+}
+
+.submenu li a {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ===============================
+   ESTILOS GERAIS
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+}
+
+body {
+  background: var(--cor-neutra-1);
+  color: var(--cor-escura);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   HEADER E NAVEGAÇÃO
+   =============================== */
+.site-header {
+  background: var(--cor-primaria);
+  color: var(--cor-clara);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espaco-sm) var(--espaco-lg);
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+/* ===============================
+   DROPDOWN
+   =============================== */
+.dropdown > a::after {
+  content: " ▾";
+  font-size: 0.8em;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: var(--cor-primaria);
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  border-radius: 6px;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: var(--espaco-sm);
+  color: var(--cor-clara);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.submenu li a:hover {
+  background: var(--cor-secundaria);
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* ===============================
+   HERO / SEÇÕES
+   =============================== */
+.hero {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-clara);
+  text-align: center;
+  padding: var(--espaco-xl) var(--espaco-lg);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--cor-destaque);
+  color: var(--cor-escura);
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: 8px;
+  margin-top: var(--espaco-sm);
+  transition: all 0.3s ease;
+  text-decoration: none; /* remove o sublinhado */
+  font-weight: 600; /* dá aparência mais "botão" */
+}
+
+.btn:hover {
+  background: var(--cor-secundaria);
+  color: var(--cor-clara);
+  text-decoration: none; /* garante que o hover não volte o sublinhado */
+}
+
+/* ===============================
+   SEÇÃO "QUEM SOMOS"
+   =============================== */
+.sobre {
+  padding: var(--espaco-lg) var(--espaco-md);
+  background: var(--cor-neutra-1);
+}
+
+.sobre h3 {
+  color: var(--cor-primaria);
+  font-size: var(--fonte-subtitulo);
+  margin-bottom: var(--espaco-md);
+}
+
+.sobre-img {
+  width: 500px;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto var(--espaco-lg);
+}
+
+/* ===============================
+   GALERIA DE IMAGENS
+   =============================== */
+.galeria {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: var(--espaco-xs) var(--espaco-xs);
+  text-align: center;
+  background: var(--cor-neutra-1);
+}
+
+.galeria h2 {
+  color: var(--cor-primaria);
+  font-size: var(--fonte-titulo);
+  margin-bottom: var(--espaco-md);
+  letter-spacing: auto;
+}
+
+@media (max-width: 700px) {
+  .galeria h2 {
+    font-size: 1.5rem; /* 🔹 diminui o tamanho do título */
+  }
+}
+
+
+/* ===== GRID DE IMAGENS ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas no desktop */
+  gap: var(--espaco-lg);
+  justify-items: center;
+  align-items: center;
+  padding: 0 var(--espaco-md);
+}
+
+.gallery img {
+  width: 100%;
+  height: 350px;
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== LIGHTBOX ===== */
+#lightbox {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+}
+
+#lightbox img {
+  width: 1024px;              /* largura fixa padrão */
+  height: 728px;             /* altura proporcional (4:3) */
+  object-fit: cover;         /* mantém o enquadramento e corta excesso */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===============================
+   📱 RESPONSIVIDADE
+   =============================== */
+
+/* Tablet – 2 ou 3 imagens */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espaco-md);
+  }
+
+  .gallery img {
+    height: 220px;
+  }
+}
+
+/* Mobile – 1 imagem por linha */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: var(--espaco-sm);
+  }
+
+  .gallery img {
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  #lightbox img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* ===============================
+   RESPONSIVIDADE
+   =============================== */
+
+/* 📱 Mobile – 1 imagem por linha */
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr;
+    gap: var(--espaco-md);
+  }
+
+  .galeria img {
+    height: 200px;
+  }
+}
+
+/* Tablet – 2 imagens por linha */
+@media (min-width: 601px) and (max-width: 900px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop médio – 3 imagens por linha */
+@media (min-width: 901px) and (max-width: 1199px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop largo – 4 imagens por linha */
+@media (min-width: 1200px) {
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ===============================
+   GRID / FLEX
+   =============================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--espaco-lg);
+  padding: var(--espaco-lg);
+}
+
+.card {
+  grid-column: span 4;
+  background: var(--cor-clara);
+  border-radius: 12px;
+  padding: var(--espaco-md);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===============================
+   FORMULÁRIOS
+   =============================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+  padding: var(--espaco-md);
+  background: var(--cor-clara);
+  border-radius: 12px;
+
+  /* Centralização e largura controlada */
+  max-width: 600px;      /* ajuste o tamanho aqui (500–700px funciona bem) */
+  margin: 0 auto;        /* centraliza horizontalmente */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: var(--espaco-sm);
+  border: 1px solid var(--cor-neutra-2);
+  border-radius: 8px;
+  font-size: var(--fonte-texto);
+}
+
+button {
+  width: 100%;
+  padding: var(--espaco-sm);
+  background: var(--cor-primaria);   /* verde original */
+  color: var(--cor-clara);           /* texto branco */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: var(--fonte-botao);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--cor-secundaria); /* verde mais escuro ao passar o mouse */
+  transform: scale(1.01);
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background: var(--cor-primaria);
+  color: var(--cor-clara);
+  text-align: center;
+  padding: var(--espaco-lg);
+  font-size: var(--fonte-pequena);
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  margin-top: auto;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
+}
+
+footer a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main { flex: 1; }
+
+
+/* ===============================
+   MOBILE / RESPONSIVIDADE
+   =============================== */
+@media (max-width: 800px) {
+  .site-header {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--espaco-sm);
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: var(--espaco-md);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--cor-primaria);
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    z-index: 999;
+  }
+
+  nav ul.ativo {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  h1, h2 { font-size: 1.2rem; }
+  h3 { font-size: 1.1rem; }
+  p { font-size: 0.8rem; }
+
+  .sobre-img {
+    width: 300px;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1200px) {
+  .card { grid-column: span 6; }
+}
+
+@media (max-width: 900px) {
+  .cards { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .hero { padding: var(--espaco-lg) var(--espaco-md); }
+  .card { grid-column: span 12; }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaco-sm);
+    width: 100%;
+  }
+
+  .logo {
+    height: 40px;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .header-content h1 {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 500px) {
+  nav a { font-size: 0.9rem; }
+  button { font-size: 0.9rem; }
+}
+
+@media (max-width: 400px) {
+  .site-header { flex-direction: column; }
+}
+
+/* ===============================
+   MENU HAMBÚRGUER (MOBILE)
+   =============================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle span {
+  background: var(--cor-clara);
+  width: 26px;
+  height: 3px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Animação de “X” quando ativo */
+.menu-toggle.ativo span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.ativo span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.ativo span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+.menu-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Exibir apenas em telas pequenas */
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: var(--espaco-md);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--cor-primaria);
+    border-radius: 0 0 10px 10px;
+    z-index: 1000;
+  }
+
+  nav ul.ativo {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+  form,
+  .contato,
+  .cadastro {
+    box-shadow: none !important;
+    background: var(--cor-clara); /* mantém o fundo branco liso */
+  }
+}
+
+/* ===============================
+   🚀 Espaçamento entre header e título (Mobile)
+   =============================== */
+@media (max-width: 800px) {
+  .projetos,
+  .cadastro,
+  .galeria,
+  .contato {
+    padding-top: var(--espaco-xs); /* espaço interno superior */
+  }
+
+  .projetos h2,
+  .cadastro h2,
+  .galeria h2,
+  .contato h2 {
+    margin-top: var(--espaco-xs); /* afasta visualmente o título */
+  }
+}
+
+/* ===============================
+   ⚡ ACESSIBILIDADE E INTERAÇÃO (FOCUS / ACTIVE)
+   =============================== */
+
+/* Botões e links com foco visível para acessibilidade */
+.btn:focus,
+button:focus,
+a:focus {
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+/* Efeito de clique (active) */
+.btn:active,
+button:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* ===============================
+   ⚡ ACESSIBILIDADE E INTERAÇÃO (FOCUS / ACTIVE)
+   =============================== */
+
+.btn:focus,
+button:focus,
+a:focus {
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+.btn:active,
+button:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* ===============================
+   💬 COMPONENTES DE FEEDBACK (ALERTS, TOASTS, TAGS, BADGES)
+   =============================== */
+
+/* Alertas fixos na página */
+.alerta {
+  background: rgba(244, 180, 0, 0.15);
+  color: var(--cor-escura);
+  border-left: 5px solid var(--cor-destaque);
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: 6px;
+  margin: var(--espaco-md) auto;
+  max-width: 700px;
+  font-size: var(--fonte-texto);
+}
+
+.alerta-sucesso {
+  background: rgba(111, 181, 135, 0.15);
+  border-left-color: var(--cor-primaria);
+}
+
+.alerta-erro {
+  background: rgba(255, 0, 0, 0.1);
+  border-left-color: red;
+}
+
+/* Toast flutuante automático */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--cor-primaria);
+  color: var(--cor-clara);
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: 9999;
+  font-size: var(--fonte-pequena);
+  animation: toastShow 0.6s ease forwards, toastHide 0.6s ease 4s forwards;
+}
+
+@keyframes toastShow {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes toastHide {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(20px); }
+}
+
+/* Badges e tags */
+.badge,
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: 2px;
+  text-transform: capitalize;
+}
+
+.badge-primaria, .tag-primaria {
+  background: var(--cor-primaria);
+  color: var(--cor-clara);
+}
+
+.badge-secundaria, .tag-secundaria {
+  background: var(--cor-secundaria);
+  color: var(--cor-escura);
+}
+
+.badge-destaque, .tag-destaque {
+  background: var(--cor-destaque);
+  color: var(--cor-escura);
+}
+

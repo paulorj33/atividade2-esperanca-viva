@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esperança Viva | Cadastro</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- ===============================
+       CABEÇALHO E MENU GLOBAL
+  =============================== -->
+  <header class="site-header">
+    <div class="header-content">
+      <img src="assets/titulo.png" alt="Símbolo Esperança Viva" class="logo" />
+      <h1>Esperança Viva</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <!-- Dropdown integrado -->
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <ul class="submenu">
+            <li><a href="projetos.html#educacao">Educação</a></li>
+            <li><a href="projetos.html#saude">Saúde</a></li>
+            <li><a href="projetos.html#alimentacao">Alimentação</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cadastro.html" class="ativo">Cadastro</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       CONTEÚDO PRINCIPAL
+  =============================== -->
+  <main>
+    <section class="contato">
+      <h2 class="section-title">Cadastro de Voluntário ou Doador</h2>
+
+      <!-- O formulário agora usa apenas "form" para aplicar o CSS atual -->
+      <form action="#" method="post">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required />
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="cadastro@seuemail.com" required />
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" required />
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" placeholder="Ex: Brasil" required />
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required />
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" required />
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="00000-000" required />
+
+        <button type="submit">Enviar Cadastro</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===============================
+       RODAPÉ
+  =============================== -->
+  <footer>
+    <p>&copy; 2025 Esperança Viva. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esperança Viva | Página Inicial</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- ===============================
+       ESTILO LOCAL PARA A LOGO
+       =============================== -->
+  <style>
+    /* Ajuste do tamanho da logo */
+    .logo {
+      height: 50px;
+      width: auto;
+      max-width: 20%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    body.home .logo {
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body class="home">
+  <!-- ===============================
+       CABEÇALHO E NAVEGAÇÃO
+  =============================== -->
+  <header class="site-header">
+    <!-- 🔹 Logo e título -->
+    <div class="header-content">
+      <img src="assets/titulo.png" alt="Símbolo Esperança Viva" class="logo">
+      <h1>Esperança Viva</h1>
+    </div>
+
+    <!-- 🔹 Botão do menu hambúrguer (visível apenas no mobile) -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- 🔹 Navegação principal -->
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html" class="ativo">Início</a></li>
+
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <ul class="submenu">
+            <li><a href="projetos.html#educacao">Educação</a></li>
+            <li><a href="projetos.html#saude">Saúde</a></li>
+            <li><a href="projetos.html#alimentacao">Alimentação</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       CONTEÚDO PRINCIPAL
+  =============================== -->
+  <main>
+    <section class="hero">
+      <h2>Transformando vidas através da solidariedade</h2>
+      <p>Conheça nossos projetos sociais e descubra como fazer parte dessa transformação.</p>
+      <a href="projetos.html" class="btn">Ver Projetos</a>
+    </section>
+
+    <section class="sobre">
+      <h3>Quem Somos</h3>
+      <img src="assets/logo.png" alt="Logotipo Esperança Viva" class="sobre-img">
+      <p>O <strong>Esperança Viva</strong> é uma organização sem fins lucrativos comprometida em transformar realidades e promover o desenvolvimento sustentável em comunidades em situação de vulnerabilidade.
+      Nossa missão é semear oportunidades, fortalecer vínculos e inspirar ações solidárias que gerem impacto social duradouro.</p>
+
+      <p>Acreditamos que a mudança começa com gestos simples e coletivos. Por meio de projetos voltados à educação, saúde, inclusão e sustentabilidade, buscamos construir um futuro mais justo, humano e cheio de esperança para todos.</p>
+    </section>
+  </main>
+
+  <!-- ===============================
+       RODAPÉ
+  =============================== -->
+  <footer>
+    <p>&copy; 2025 Esperança Viva. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ===============================
+       SCRIPT DE INTERAÇÕES
+  =============================== -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('ativo');
+      toggle.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

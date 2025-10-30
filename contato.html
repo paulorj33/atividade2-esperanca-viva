@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esperança Viva | Fale Conosco</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- ===============================
+       CABEÇALHO E MENU GLOBAL
+  =============================== -->
+  <header class="site-header">
+    <div class="header-content">
+      <img src="assets/titulo.png" alt="Símbolo Esperança Viva" class="logo">
+      <h1>Esperança Viva</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <!-- ✅ Dropdown de Projetos -->
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <ul class="submenu">
+            <li><a href="projetos.html#educacao">Educação</a></li>
+            <li><a href="projetos.html#saude">Saúde</a></li>
+            <li><a href="projetos.html#alimentacao">Alimentação</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html" class="ativo">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       CONTEÚDO PRINCIPAL
+  =============================== -->
+  <main>
+    <section class="contato">
+      <h2>Fale Conosco</h2>
+
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="info">
+        <p><strong>Endereço:</strong> Rua Solidariedade, 123 - Rio de Janeiro, RJ</p>
+        <p><strong>Telefone:</strong> (21) 99999-9999</p>
+        <p><strong>E-mail:</strong> contato@esperancaviva.org.br</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===============================
+       RODAPÉ
+  =============================== -->
+  <footer>
+    <p>&copy; 2025 Esperança Viva. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ===============================
+       SCRIPT DE INTERAÇÕES
+  =============================== -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
