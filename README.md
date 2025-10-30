@@ -44,8 +44,8 @@ esperanca-viva/
 ---
 
 ## 🚀 Como Executar
-1. Baixe ou clone o repositório:
-   ```bash git clone https://github.com/paulorj33/atividade2-esperanca-viva
+1. Baixe ou clone o repositório: [git clone https://github.com/paulorj33/atividade2-esperanca-viva]
+   ```bash
 Abra o arquivo index.html no navegador.
 
 🏫 Informações Acadêmicas
