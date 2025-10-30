@@ -33,10 +33,7 @@ esperanca-viva/
 └── assets/
 ├── imagens e ícones
 
-yaml
-Copiar código
 
----
 
 ## 🧰 Tecnologias Utilizadas
 - **HTML5**
