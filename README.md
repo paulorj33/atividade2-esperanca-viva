@@ -46,15 +46,15 @@ esperanca-viva/
 ## 🚀 Como Executar
 1. Baixe ou clone o repositório:  
    ```bash
-   git clone https://github.com/SEU_USUARIO/esperanca-viva
+git clone https://github.com/paulorj33/atividade2-esperanca-viva
 Abra o arquivo index.html no navegador.
 
 🏫 Informações Acadêmicas
 Universidade Veiga de Almeida – Curso de Análise e Desenvolvimento de Sistemas
 Entrega II – Aplicação de CSS3 e Design Responsivo
 
-🌐 Link do Projeto
-🔗 Acesse o repositório no GitHub
+🌐 Acesse o Site Publicado [https://paulorj33.github.io/atividade2-esperanca-viva/]
+🔗 Acesse o repositório no GitHub [https://github.com/paulorj33/atividade2-esperanca-viva]
 
 ✅ Projeto concluído e em conformidade com todos os requisitos da Entrega II.
 
