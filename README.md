@@ -61,6 +61,4 @@ Entrega II – Aplicação de CSS3 e Design Responsivo
 
 ✅ Projeto concluído e em conformidade com todos os requisitos da Entrega II.
 
-yaml
-Copiar código
----
+
